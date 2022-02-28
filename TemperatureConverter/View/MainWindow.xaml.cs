@@ -25,10 +25,10 @@ namespace View
             InitializeComponent();
         }
 
-        private void ConvertToCelsuis(object sender, RoutedEventArgs e)
+        private void ConvertToCelsius(object sender, RoutedEventArgs e)
         {
-
-            textBox.Text = "You clicked the button";
+            var val = double.Parse(textBox.Text) * 0.3778;
+            textBox.Text = $"{val}";
         }
     }
 }
