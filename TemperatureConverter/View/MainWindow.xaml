@@ -49,9 +49,21 @@
             <TextBox Grid.Row="1"  x:Name="textBox"  />
             <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}" />
         </Grid>
-        <TextBlock Text="Fanrenheit"  FontWeight="Bold" Padding="2" FontSize="16" Style="{StaticResource labelStyle}" />
-        <TextBox x:Name="textBoxCtF" FontSize="16" TextAlignment="Center"/>
-        <Button Content="Convert to F" Click="ConvertToFanrenheit" Style="{StaticResource buttonStyle}"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Fanrenheit" Grid.Row="0"  Style="{StaticResource labelStyle}" />
+            <TextBox x:Name="textBoxCtF" Grid.Row="1" />
+            <Button Content="Convert to F" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Click="ConvertToFanrenheit" Style="{StaticResource buttonStyle}"/>
+        </Grid>
+        
+        
     </StackPanel>
     
 </Window>
