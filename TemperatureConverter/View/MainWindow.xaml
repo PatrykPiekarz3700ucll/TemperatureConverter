@@ -75,6 +75,7 @@
             <TextBox x:Name="textBoxK" Grid.Row="1" />
             <Button Content="Convert to F" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Click="ConvertKelvin" Style="{StaticResource buttonStyle}"/>
         </Grid>
+        <Slider x:Name="slider" Minimum="0" Maximum="1000" />
 
     </StackPanel>
     
