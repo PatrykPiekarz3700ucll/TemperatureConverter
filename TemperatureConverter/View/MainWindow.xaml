@@ -9,8 +9,8 @@
 
     <StackPanel>
         <TextBlock Text="Celius" FontWeight="Bold" Padding="2" FontSize="16">
-            <TextBlock.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <TextBlock.Background >
+                <LinearGradientBrush x:Key="labelBackgroundBrush" StartPoint="0,0" EndPoint="1,0" >
                     <GradientStop Color="Gray" Offset="0" />
                     <GradientStop Color="White" Offset="1" />
                 </LinearGradientBrush>
@@ -19,17 +19,8 @@
         <TextBox x:Name="textBox" FontSize="16" TextAlignment="Center"/>
         <Button Content="Convert to Celsuis" Click="ConvertToCelsius" />
 
-        <TextBlock Text="Fanrenheit"  FontWeight="Bold" Padding="2" FontSize="16">
-            <TextBlock.Background>
-
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-
-                    <GradientStop Color="Gray" Offset="0" />
-
-                    <GradientStop Color="White" Offset="1" />
-
-                </LinearGradientBrush>
-            </TextBlock.Background>
+        <TextBlock Text="Fanrenheit"  FontWeight="Bold" Padding="2" FontSize="16" Background="{StaticResource labelBackgroundBrush}">
+            
         </TextBlock>
         
         <TextBox x:Name="textBoxCtF" FontSize="16" TextAlignment="Center"/>
