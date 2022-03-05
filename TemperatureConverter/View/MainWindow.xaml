@@ -36,15 +36,20 @@
     
     
     <StackPanel>
-        <TextBlock Text="Celius" FontWeight="Bold" Padding="2" FontSize="16" Style="{StaticResource labelStyle}">
-        </TextBlock>
-        <TextBox x:Name="textBox" FontSize="16" TextAlignment="Center"/>
-        <Button Content="Convert to Celsuis" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}"/>
-
-        <TextBlock Text="Fanrenheit"  FontWeight="Bold" Padding="2" FontSize="16" Style="{StaticResource labelStyle}">
-            
-        </TextBlock>
-        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Celsius" Style="{StaticResource labelStyle}" />
+            <TextBox Grid.Row="1"  x:Name="textBox"  />
+            <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Content="Convert" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}" />
+        </Grid>
+        <TextBlock Text="Fanrenheit"  FontWeight="Bold" Padding="2" FontSize="16" Style="{StaticResource labelStyle}" />
         <TextBox x:Name="textBoxCtF" FontSize="16" TextAlignment="Center"/>
         <Button Content="Convert to F" Click="ConvertToFanrenheit" Style="{StaticResource buttonStyle}"/>
     </StackPanel>
