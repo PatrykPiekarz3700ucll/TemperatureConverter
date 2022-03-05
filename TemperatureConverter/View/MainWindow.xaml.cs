@@ -25,18 +25,31 @@ namespace View
             InitializeComponent();
         }
 
-        private void ConvertToCelsius(object sender, RoutedEventArgs e)
+        private void ConvertCelsius(object sender, RoutedEventArgs e)
         {
-            var val = double.Parse(textBox.Text) * 0.3778;
-            textBox.Text = $"{val}";
-           
+            var valF = double.Parse(textBoxC.Text) * 1.8 + 32;
+            var valK = double.Parse(textBoxC.Text) + 273.15;
+
+            textBoxF.Text = $"{Math.Round(valF)}";
+            textBoxK.Text = $"{Math.Round(valK)}";
         }
 
-        private void ConvertToFanrenheit(object sender, RoutedEventArgs e)
+        private void ConvertFanrenheit(object sender, RoutedEventArgs e)
         {
-            var val = double.Parse(textBoxCtF.Text) / 0.3778;
+            var valC = (double.Parse(textBoxF.Text) -32) /1.8;
+            var valK = (double.Parse(textBoxF.Text) - 32) / 1.8 + 273.15;
             
-            textBoxCtF.Text = $"{val}";
+            textBoxK.Text = $"{Math.Round(valK)}";
+            textBoxC.Text = $"{Math.Round(valC)}";
+        }
+
+        private void ConvertKelvin(object sender, RoutedEventArgs e)
+        {
+            var valC = double.Parse(textBoxK.Text) -273.15;
+            var valF = (double.Parse(textBoxK.Text) -273.15) *1.8 +32;
+
+            textBoxC.Text = $"{Math.Round(valC)}";
+            textBoxF.Text = $"{Math.Round(valF)}";
         }
     }
 }
