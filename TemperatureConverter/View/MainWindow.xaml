@@ -20,6 +20,18 @@
             <Setter Property="FontSize" Value="16" />
             <Setter Property="Padding" Value="2" />
         </Style>
+        <Style x:Key="buttonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="Red" Offset="0" />
+                        <GradientStop Color="Orange" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontStyle" Value="Oblique"/>
+        </Style>
     </Window.Resources>
     
     
@@ -27,14 +39,14 @@
         <TextBlock Text="Celius" FontWeight="Bold" Padding="2" FontSize="16" Style="{StaticResource labelStyle}">
         </TextBlock>
         <TextBox x:Name="textBox" FontSize="16" TextAlignment="Center"/>
-        <Button Content="Convert to Celsuis" Click="ConvertToCelsius" />
+        <Button Content="Convert to Celsuis" Click="ConvertToCelsius" Style="{StaticResource buttonStyle}"/>
 
         <TextBlock Text="Fanrenheit"  FontWeight="Bold" Padding="2" FontSize="16" Style="{StaticResource labelStyle}">
             
         </TextBlock>
         
         <TextBox x:Name="textBoxCtF" FontSize="16" TextAlignment="Center"/>
-        <Button Content="Convert to F" Click="ConvertToFanrenheit" />
+        <Button Content="Convert to F" Click="ConvertToFanrenheit" Style="{StaticResource buttonStyle}"/>
     </StackPanel>
     
 </Window>
