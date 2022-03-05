@@ -51,5 +51,16 @@ namespace View
             textBoxC.Text = $"{Math.Round(valC)}";
             textBoxF.Text = $"{Math.Round(valF)}";
         }
+
+        private void SliderValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double value = slider.Value;
+            double Celsius = Math.Round(value - 273.15);
+            double far = Math.Round((value - 273.15) * 1.8 + 32);
+
+            textBoxC.Text = $"{Math.Round(Celsius)}";
+            textBoxF.Text = $"{Math.Round(far)}";
+            textBoxK.Text = $"{Math.Round(value)}";
+        }
     }
 }
