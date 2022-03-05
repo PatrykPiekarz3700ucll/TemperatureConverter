@@ -29,6 +29,14 @@ namespace View
         {
             var val = double.Parse(textBox.Text) * 0.3778;
             textBox.Text = $"{val}";
+           
+        }
+
+        private void ConvertToFanrenheit(object sender, RoutedEventArgs e)
+        {
+            var val = double.Parse(textBoxCtF.Text) / 0.3778;
+            
+            textBoxCtF.Text = $"{val}";
         }
     }
 }

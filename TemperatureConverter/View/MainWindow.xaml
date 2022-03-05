@@ -8,8 +8,13 @@
         Title="MainWindow" Height="350" Width="525">
 
     <StackPanel>
+        <TextBlock Text="Celius" Background="#AAA"/>
         <TextBox x:Name="textBox" />
         <Button Content="Convert to Celsuis" Click="ConvertToCelsius" />
+
+        <TextBlock Text="Fanrenheit" Background="#AAA"/>
+        <TextBox x:Name="textBoxCtF" />
+        <Button Content="Convert to F" Click="ConvertToFanrenheit" />
     </StackPanel>
     
 </Window>
